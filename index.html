@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+
+
+
+
+
+ul {
+    margin: 20px 0;
+    display:block;
+}
+
+ul.autogallery-panels {
+    display:block;
+    width: 300px;
+    height: 50px;
+    border:1px solid #ccc;
+    position: relative;
+}
+
+ul.autogallery-panels li {
+    display:block;
+    width: 280px;
+    height: 30px;
+    padding: 10px;
+    position: absolute;
+    top:0px;
+    left:0px;
+    background: white;
+}
+ul.fun li {
+    display:block;
+}
+
+div.text-gal a {
+    display: inline-block;
+    padding: 4px;
+    background: lightgreen;
+    margin: 10px;
+    cursor:pointer;
+}
+div.nav-wrapper a.paused {
+    background: grey;
+}
+.autogallery-panels li.current-panel {
+	z-index: 1000;
+}
+
+
+div.img-gal {
+    background: #ebebeb;
+    width: 459px;
+    height: 350px;
+    overflow: hidden;    
+    position: relative;
+}
+
+div.img-gal ul.autogallery-panels {
+    display: block;
+    border: 4px solid #ccc;
+    margin: 0px 0 10px 0px;
+    padding: 0;
+    position: relative;
+    left:0px;
+    top:0px;
+    height: 262px;
+    width: 451px;
+}
+
+
+div.img-gal ul.autogallery-panels li img {
+    width: 451px;
+    height: 262px;
+}
+
+div.img-gal ul.autogallery-panels li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 262px;
+    width: 451px;
+}
+
+div.img-gal ul.img-gal{
+    margin: 0px ;
+    padding: 0;
+    width: 20000em;
+    position: relative;
+}
+
+div.img-gal ul.img-gal li {
+    margin: 0 3px 0 0;
+    padding: 0;
+    width: 73px;
+    height: 53px;
+    display: block;
+    float: left;
+    border:1px solid #bcbcbc;
+}
+
+div.img-gal ul.img-gal li img {
+    width: 73px;
+    height: 53px;
+    border: none;
+}
+
+div.img-gal ul.img-gal li.current-nav {
+	border: 1px solid red;
+}
+
+div.autogallery-nav-wrapper {
+	width: 386px;
+	margin: 12px 0 0 34px ;
+	overflow: hidden; 
+	position: relative; 
+}
+
+div.img-gal a.pause {
+    display: none;
+}
+
+div.img-gal a.next,
+div.img-gal a.back {
+    text-indent:-99999em;
+    width: 14px;
+    height: 25px;
+    display: block;
+    background: red;
+}
+ 
+div.img-gal a.back {
+    position: absolute;
+    left: 10px;
+    background: url(nav-back.gif) 0 0 no-repeat;
+    top: 300px;
+}
+
+div.img-gal a.next {
+    position: absolute;
+    right: 10px;
+    background: url(nav-next.gif) 0 0 no-repeat;
+    top: 300px;
+}
+    
+    
+    </style>
+    
+</head>
+<body>
+    
+    
+    <ul class="text-gal">
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li>Vestibulum auctor dapibus neque.</li>
+     </ul>
+
+     <ul class="img-gal">
+     	<li><a href="images/1.jpg"><img src="images/thumbs/1.jpg" width="100" height="75" alt="1" /></a></li>
+     	<li><a href="images/2.jpg"><img src="images/thumbs/2.jpg" width="100" height="75" alt="1" /></a></li>
+     	<li><a href="images/3.jpg"><img src="images/thumbs/3.jpg" width="100" height="75" alt="1" /></a></li>
+     	<li><a href="images/4.jpg"><img src="images/thumbs/4.jpg" width="100" height="75" alt="1" /></a></li>
+     	<li><a href="images/5.jpg"><img src="images/thumbs/5.jpg" width="100" height="75" alt="1" /></a></li>
+     	<li><a href="images/6.jpg"><img src="images/thumbs/6.jpg" width="100" height="75" alt="1" /></a></li>
+     	<li><a href="images/7.jpg"><img src="images/thumbs/7.jpg" width="100" height="75" alt="1" /></a></li>
+     	<li><a href="images/8.jpg"><img src="images/thumbs/8.jpg" width="100" height="75" alt="1" /></a></li>
+     </ul> 
+
+    
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <script src="jquery.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">  
+        $(document).ready(function() {
+            $('.text-gal').gallery({autoStart:true,showCount:true});
+            $('.img-gal').gallery({autoStart:true,thumbNav:true});
+        });
+    </script>
+ 
+    
+</body>
+
+
+ 
+
+
+</html>
